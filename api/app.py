@@ -19,6 +19,7 @@ def search_tkk():
     }
     
     r = requests.get(check_url, headers=headers_get)
+    print (r.cookies.get_dict())
     csrf = r.cookies['csrf_cookie_name']
     print (csrf)
     cookies = dict(r.cookies)  # Corrected to proper dict format for requests
