@@ -18,7 +18,7 @@ def search_tkk():
         'Connection': 'keep-alive',
     }
     
-    r = requests.get(check_url, headers=headers_get)
+    r = requests.get(check_url)
     print (r.cookies.get_dict())
     csrf = r.cookies['csrf_cookie_name']
     print (csrf)
